@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/ui/stores/theme_store.dart';
 import 'package:flutter_boilerplate/app/home/ui/pages/home_page.dart';
-import 'package:flutter_boilerplate/common/injected/module.dart';
+import 'package:flutter_boilerplate/config/ui/theme/ui/stores/theme_store.dart';
+import 'package:flutter_boilerplate/core/common/injected/module.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/intl_localizations.dart';
 
 class MyApp extends StatelessWidget {
   final ThemeStore _themeStore = getIt.get<ThemeStore>();
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
             onGenerateRoute: generateRoutes,
             theme: value.theme,
             initialRoute: '/',
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
           ),
         ),
       ),

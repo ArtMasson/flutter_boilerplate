@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/app_theme.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/domain/repositories/theme_repository.dart';
-import 'package:flutter_boilerplate/common/injected/module.dart';
+import 'package:flutter_boilerplate/config/ui/theme/app_theme.dart';
+import 'package:flutter_boilerplate/config/ui/theme/domain/repositories/theme_repository.dart';
+import 'package:flutter_boilerplate/core/common/injected/module.dart';
 import 'package:mobx/mobx.dart';
 
 part 'theme_store.g.dart';

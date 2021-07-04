@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/ui/stores/theme_store.dart';
-import 'package:flutter_boilerplate/common/injected/module.dart';
+import 'package:flutter_boilerplate/config/ui/theme/ui/stores/theme_store.dart';
+import 'package:flutter_boilerplate/core/common/injected/module.dart';
+import 'package:flutter_gen/gen_l10n/intl_localizations.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Text(
-              "Hello World",
+              AppLocalizations.of(context)!.homeWelcome,
               style: TextStyle(
                 fontSize: 26,
               ),
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
               height: 4,
             ),
             Text(
-              "Flutter boilerplate",
+              AppLocalizations.of(context)!.homeDesc,
               style: TextStyle(
                 fontSize: 16,
               ),

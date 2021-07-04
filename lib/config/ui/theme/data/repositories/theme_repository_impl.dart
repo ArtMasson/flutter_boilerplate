@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/app/config/ui/consts/app_consts.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/app_theme.dart';
-import 'package:flutter_boilerplate/app/config/ui/theme/domain/repositories/theme_repository.dart';
+import 'package:flutter_boilerplate/config/ui/consts/app_consts.dart';
+import 'package:flutter_boilerplate/config/ui/theme/app_theme.dart';
+import 'package:flutter_boilerplate/config/ui/theme/domain/repositories/theme_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeRepositoryImp implements ThemeRepository {

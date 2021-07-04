@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_boilerplate/config/ui/theme/ui/stores/theme_store.dart';
 import 'package:flutter_boilerplate/core/common/injected/module.dart';
 import 'package:flutter_gen/gen_l10n/intl_localizations.dart';
+import 'package:flutter_boilerplate/core/common/utils/screen_utils.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -36,9 +37,6 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
-              height: 20,
-            ),
             Text(
               AppLocalizations.of(context)!.homeWelcome,
               style: TextStyle(
@@ -46,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 4,
+              height: 4.h,
             ),
             Text(
               AppLocalizations.of(context)!.homeDesc,

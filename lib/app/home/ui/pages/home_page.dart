@@ -33,30 +33,24 @@ class _HomePageState extends State<HomePage> {
           ? SystemUiOverlayStyle.light
           : SystemUiOverlayStyle.dark,
       child: Center(
-        child: Row(
-          children: [
-            Text("OI"),
-            SizedBox(width: 20.w),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  AppLocalizations.of(context)!.homeWelcome,
-                  style: TextStyle(
-                    fontSize: 26,
-                  ),
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text(
-                  AppLocalizations.of(context)!.homeDesc,
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-              ],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              AppLocalizations.of(context)!.homeWelcome,
+              style: TextStyle(
+                fontSize: 26,
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              AppLocalizations.of(context)!.homeDesc,
+              style: TextStyle(
+                fontSize: 16,
+              ),
             ),
           ],
         ),

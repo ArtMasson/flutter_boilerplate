@@ -27,3 +27,39 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins/Poppins-Black.ttf
+        - asset: fonts/Poppins/Poppins-BlackItalic.ttf
+        - asset: fonts/Poppins/Poppins-Bold.ttf
+        - asset: fonts/Poppins/Poppins-BoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-ExtraBold.ttf
+        - asset: fonts/Poppins/Poppins-ExtraBoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-ExtraLight.ttf
+        - asset: fonts/Poppins/Poppins-Italic.ttf
+        - asset: fonts/Poppins/Poppins-Light.ttf
+        - asset: fonts/Poppins/Poppins-LightItalic.ttf
+        - asset: fonts/Poppins/Poppins-Medium.ttf
+        - asset: fonts/Poppins/Poppins-MediumItalic.ttf
+        - asset: fonts/Poppins/Poppins-Regular.ttf
+        - asset: fonts/Poppins/Poppins-SemiBold.ttf
+        - asset: fonts/Poppins/Poppins-SemiBoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-Thin.ttf
+        - asset: fonts/Poppins/Poppins-ThinItalic.ttf
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito/Nunito-Black.ttf
+        - asset: fonts/Nunito/Nunito-BlackItalic.ttf
+        - asset: fonts/Nunito/Nunito-Bold.ttf
+        - asset: fonts/Nunito/Nunito-BoldItalic.ttf
+        - asset: fonts/Nunito/Nunito-ExtraBold.ttf
+        - asset: fonts/Nunito/Nunito-ExtraBoldItalic.ttf
+        - asset: fonts/Nunito/Nunito-ExtraLight.ttf
+        - asset: fonts/Nunito/Nunito-ExtraLightItalic.ttf
+        - asset: fonts/Nunito/Nunito-Italic.ttf
+        - asset: fonts/Nunito/Nunito-Light.ttf
+        - asset: fonts/Nunito/Nunito-LightItalic.ttf
+        - asset: fonts/Nunito/Nunito-Regular.ttf
+        - asset: fonts/Nunito/Nunito-SemiBold.ttf
+        - asset: fonts/Nunito/Nunito-SemiBoldItalic.ttf

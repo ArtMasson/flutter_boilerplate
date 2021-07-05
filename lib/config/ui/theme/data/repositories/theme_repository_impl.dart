@@ -1,48 +1,24 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/config/ui/consts/app_consts.dart';
-import 'package:flutter_boilerplate/config/ui/theme/app_theme.dart';
+import 'package:flutter_boilerplate/config/ui/theme/data/datasources/theme_datasource.dart';
 import 'package:flutter_boilerplate/config/ui/theme/domain/repositories/theme_repository.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_boilerplate/core/common/injected/module.dart';
 
-class ThemeRepositoryImp implements ThemeRepository {
-  @override
-  Future<void> setThemeKey(Brightness brightness) async {
-    (await SharedPreferences.getInstance()).setString(
-      AppConstants.THEME,
-      brightness == Brightness.light ? "light" : "dark",
-    );
-  }
+class ThemeRepositoryImpl implements ThemeRepository {
+  final ThemeDataSource _datasource = getIt.get<ThemeDataSource>();
 
   @override
-  Future<String?> getThemeKey() async {
-    return (await SharedPreferences.getInstance())
-        .getString(AppConstants.THEME);
-  }
+  Future<void> setThemeKey(Brightness brightness) =>
+      _datasource.setThemeKey(brightness);
 
   @override
-  Future<ThemeData> getTheme() async {
-    final String? themeKey = await getThemeKey();
-
-    if (themeKey == null) {
-      await setThemeKey(lightTheme.brightness);
-
-      return lightTheme;
-    } else {
-      return themeKey == "light" ? lightTheme : darkTheme;
-    }
-  }
+  Future<String?> getThemeKey() => _datasource.getThemeKey();
 
   @override
-  Future<ThemeData> toggleTheme(ThemeData theme) async {
-    if (theme == lightTheme) {
-      theme = darkTheme;
-    } else {
-      theme = lightTheme;
-    }
+  Future<ThemeData> getTheme() => _datasource.getTheme();
 
-    await setThemeKey(theme.brightness);
-    return theme;
-  }
+  @override
+  Future<ThemeData> toggleTheme(ThemeData theme) =>
+      _datasource.toggleTheme(theme);
 }

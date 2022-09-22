@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/app/modules/home/page/home_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -21,9 +22,24 @@ class _HomePageState extends State<HomePage> {
           'home.title'.i18n(),
         ),
         centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      body: Container(
-        color: Colors.green,
+      body: OpenContainer(
+        transitionType: ContainerTransitionType.fade,
+        transitionDuration: const Duration(milliseconds: 700),
+        openBuilder: (context, action) => Container(
+          color: Theme.of(context).colorScheme.secondary,
+          child: IconButton(
+            onPressed: () {
+              Modular.to.pop();
+            },
+            icon: Icon(Icons.close),
+          ),
+        ),
+        closedBuilder: (context, action) => Container(
+          color: Theme.of(context).colorScheme.secondary,
+          height: 200,
+        ),
       ),
     );
   }

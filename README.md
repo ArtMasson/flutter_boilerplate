@@ -1,8 +1,6 @@
 ## Features
-- Custom themes
-- Mobx
-- GetIt
+- GetX for State Managment
+- Flutter_Modular for di and routes
 - l10n localization
-- Responsive design
 
 Always improving
